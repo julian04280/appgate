@@ -1,12 +1,12 @@
 package com.addgate.calculator.service.iservice;
 
 
-import com.addgate.calculator.controller.dto.LoginDto;
-import com.addgate.calculator.repository.entity.LoginEntity;
+import com.addgate.calculator.util.Operators;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface LoginService {
+public interface OperandoService {
 
-    LoginEntity find(LoginDto loginDto);
+    String save(Double value, String idTransaction);
+    String result(Operators value, String idTransaction, boolean addResult);
 }

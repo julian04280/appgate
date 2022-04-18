@@ -4,23 +4,22 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
-public class LoginEntity {
+public class OperandoEntity {
 
         @Id
+        @GeneratedValue(strategy= GenerationType.IDENTITY)
         private Long id;
 
         @Column
-        private String email;
+        private Double value;
 
         @Column
-        private String password;
+        private String idTransaction;
 
 }

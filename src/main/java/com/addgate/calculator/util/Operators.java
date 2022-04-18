@@ -1,6 +1,6 @@
-package com.addgate.calculator.util.config;
+package com.addgate.calculator.util;
 
-public enum operators {
+public enum Operators {
     SUMA,
     RESTA,
     MULTIPLICACION,

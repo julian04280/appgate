@@ -1,11 +1,16 @@
 package com.addgate.calculator.repository;
 
-import com.addgate.calculator.repository.entity.LoginEntity;
+import com.addgate.calculator.repository.entity.OperandoEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface SpringDataLoginRepository extends JpaRepository<LoginEntity, Long> {
+import java.util.List;
 
-    LoginEntity findByEmailAndPassword(String email, String password);
+@Repository
+public interface SpringDataOperandoRepository extends JpaRepository<OperandoEntity, Long> {
+
+    List<OperandoEntity> findByIdTransaction(String idTrasaction);
+
+    void deleteByIdTransaction(String idTrasaction);
+
 }
